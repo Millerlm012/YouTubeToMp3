@@ -3,38 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException, ElementNotInteractableException
 
-'''
-NOTES:
-- Incorporate multithreading to speed up the process 
-'''
-
-'''
-# retrieves the correct links and reorganizes
-def mp3():
-    links_unfinished = open('links_unfinished.txt').read().splitlines()
-
-    print(len(links_unfinished))
-    print(links_unfinished)
-    links_2 = [x for x in links_unfinished if 'https://www.youtube.com/user' not in x]
-    links_comp = [x for x in links_2 if 'https://www.youtube.com/channel' not in x]
-    print(len(links_comp))
-    print(links_comp)
-
-    # saves cleaned links to a finished .txt file
-    with open("links_fin.txt", 'w') as output:
-        for row in links_comp:
-            output.write(str(row) + '\n')
-
-    youtube_mp3_download_link = 'https://www.y2mate.com/en19/youtube-mp3'
-    path_to_extension = r'C:/Users/mille/AppData/Local/Google/Chrome/User Data/Default/Extensions/gighmmpiobklfepjocnamgkkbiglidom/4.7.3_0'
-    chrome_options = Options()
-    chrome_options.add_argument('load-extension=' + path_to_extension)
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.create_options()
-    driver.switch_to.window(driver.window_handles[1])
-    time.sleep(5)
-'''
-
 
 def mp3():
     links_comp = open('links_fin.txt').read().splitlines()
