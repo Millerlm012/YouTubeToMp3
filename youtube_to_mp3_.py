@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException, ElementClickInter
 
 
 def mp3():
-    links_comp = open('links_fin.txt').read().splitlines()
+    links_comp = open('links.txt').read().splitlines()
     i = 0
 
     print(len(links_comp))
