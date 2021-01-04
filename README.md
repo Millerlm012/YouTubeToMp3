@@ -3,4 +3,4 @@ After you copy your YouTube playlist links and put them in a .txt - The program 
 
 NOTE: THIS WAS ONLY USED FOR EDUCATIONAL PURPOSES OF USING SELENIUM TO ACCESS THE WEB TO COMPLETE SOME SORT OF TIME WASTING PROCEDURE
 
-- 
+- this was a program used for educational purposes and is not being updated regularly - (it may no longer work)
