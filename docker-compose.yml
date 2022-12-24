@@ -1,0 +1,8 @@
+version: "3"
+services:
+
+  ytbmp3:
+    build: ./convert/image
+    command: python3 -u /srv/youtube_to_mp3.py
+    volumes:
+      - ./convert/srv:/srv

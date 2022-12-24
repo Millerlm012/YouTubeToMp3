@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS songs;
+
+CREATE TABLE albums (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    album_name TEXT NOT NULL,
+    url TEXT NOT NULL
+);
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    album_name TEXT NOT NULL,
+    song_name TEXT NOT NULL,
+    url TEXT NOT NULL
+)
