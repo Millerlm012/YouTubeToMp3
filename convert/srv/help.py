@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from discord import SyncWebhook
+import chromedriver_autoinstaller
 
 from functools import wraps
 from datetime import datetime
@@ -18,13 +19,23 @@ def send_discord_message(msg):
     return
 
 def init_chrome_driver(headless=True):
+    # NOTE: this works locally but not in container
+    # checks if chromedriver is installed, if not - installs and adds to path
+    log('Checking chromedriver...')
+    try:
+        chromedriver_autoinstaller.install()
+    except Exception as e:
+        log(f'Something went wrong installing the chromedriver!\nException: {e}')
+        exit(1)
+    log('Chromedriver is good to go!')
     log('Starting chromedriver!')
+
     options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
+    # options.add_argument('--headless')
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--disable-dev-shm-usage')
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--window-size=1920,1080")
     try:
         driver = webdriver.Chrome(options=options)
     except Exception as e:

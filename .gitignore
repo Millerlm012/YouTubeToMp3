@@ -1,4 +1,7 @@
-urls.csv
-albums.csv
+*.csv
+*.db
+
 data/
 env/
+__pycache__/
+.DS_Store

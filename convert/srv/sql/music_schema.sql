@@ -8,7 +8,6 @@ CREATE TABLE albums (
 );
 
 CREATE TABLE songs (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
     album_name TEXT NOT NULL,
     song_name TEXT NOT NULL,
     url TEXT NOT NULL
